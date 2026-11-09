@@ -2,7 +2,7 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    # Chạy tự động mỗi 12 tiếng
+    # Auto-generate every 12 hours
     - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
