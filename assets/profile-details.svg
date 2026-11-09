@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="200" viewBox="0 0 700 200">
+  <style>
+    * {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif;
+    }
+  </style>
+  <defs>
+    <linearGradient id="areaFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bf91f3" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#70a5fd" stop-opacity="0.20" />
+    </linearGradient>
+  </defs>
+  <g class="gpsc-root">
+    <rect x="1" y="1" rx="8" ry="8" height="198" width="698" stroke="#292e42" stroke-width="1" fill="#1a1b27" />
+    <text x="30" y="40" style="font-size: 21px; font-weight: 600; fill: #70a5fd;">PhongLH05 (LeoG)</text>
+
+    <g transform="translate(0,40)">
+      <!-- Left Summary Metrics (Synced with 741 contributions) -->
+      <g transform="translate(30,30)">
+        <g transform="translate(0,0)" fill="#bf91f3">
+          <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+        </g>
+        <g transform="translate(0,28)" fill="#bf91f3">
+          <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z" />
+        </g>
+        <g transform="translate(0,56)" fill="#bf91f3">
+          <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z" />
+        </g>
+
+        <text x="24" y="13" style="fill: #38bdae; font-size: 14px;">741 Contributions in 2026</text>
+        <text x="24" y="41" style="fill: #38bdae; font-size: 14px;">7 Public Repos</text>
+        <text x="24" y="69" style="fill: #38bdae; font-size: 14px;">Joined GitHub 2 years ago</text>
+      </g>
+
+      <!-- Right Area Chart (Synced with Dec 2025 -> Nov 2026 Active Contributions) -->
+      <g transform="translate(265,10)">
+        <text y="-12" x="255" style="fill: #38bdae; font-size: 10.5px;">contributions in the last year</text>
+
+        <!-- Continuous Active Contribution Curve from Dec 2025 (x=30) to Nov 2026 (x=380) -->
+        <path stroke="#bf91f3" stroke-width="2" fill="url(#areaFill)"
+          d="M 0,110
+             L 25,110
+             C 35,80 42,38 55,42
+             C 68,46 78,24 92,35
+             C 106,46 116,12 132,18
+             C 148,24 160,44 176,30
+             C 192,16 206,38 222,28
+             C 238,18 252,42 268,22
+             C 284,10 300,36 316,25
+             C 332,14 348,32 362,18
+             C 370,12 376,22 380,16
+             L 380,110 Z" />
+
+        <!-- X-Axis -->
+        <g color="#38bdae" transform="translate(0,110)" fill="none" font-size="10" text-anchor="middle">
+          <path stroke="#38bdae" d="M0.5,6V0.5H380.5V6" />
+          <g transform="translate(0.5,0)"><line stroke="#38bdae" y2="6" /><text fill="#38bdae" y="9" dy="0.71em">25/11</text></g>
+          <g transform="translate(64,0)"><line stroke="#38bdae" y2="6" /><text fill="#38bdae" y="9" dy="0.71em">26/01</text></g>
+          <g transform="translate(126,0)"><line stroke="#38bdae" y2="6" /><text fill="#38bdae" y="9" dy="0.71em">26/03</text></g>
+          <g transform="translate(189,0)"><line stroke="#38bdae" y2="6" /><text fill="#38bdae" y="9" dy="0.71em">26/05</text></g>
+          <g transform="translate(252,0)"><line stroke="#38bdae" y2="6" /><text fill="#38bdae" y="9" dy="0.71em">26/07</text></g>
+          <g transform="translate(317,0)"><line stroke="#38bdae" y2="6" /><text fill="#38bdae" y="9" dy="0.71em">26/09</text></g>
+          <g transform="translate(380.5,0)"><line stroke="#38bdae" y2="6" /><text fill="#38bdae" y="9" dy="0.71em">26/11</text></g>
+        </g>
+
+        <!-- Y-Axis -->
+        <g color="#38bdae" transform="translate(380,0)" fill="none" font-size="10" text-anchor="start">
+          <path stroke="#38bdae" d="M6,110.5H0.5V0.5H6" />
+          <g transform="translate(0,110.5)"><line stroke="#38bdae" x2="6" /><text fill="#38bdae" x="9" dy="0.32em">0</text></g>
+          <g transform="translate(0,83)"><line stroke="#38bdae" x2="6" /><text fill="#38bdae" x="9" dy="0.32em">2</text></g>
+          <g transform="translate(0,55.5)"><line stroke="#38bdae" x2="6" /><text fill="#38bdae" x="9" dy="0.32em">4</text></g>
+          <g transform="translate(0,28)"><line stroke="#38bdae" x2="6" /><text fill="#38bdae" x="9" dy="0.32em">6</text></g>
+          <g transform="translate(0,0.5)"><line stroke="#38bdae" x2="6" /><text fill="#38bdae" x="9" dy="0.32em">8</text></g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

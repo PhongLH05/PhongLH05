@@ -24,13 +24,13 @@
 
   <br/>
 
-  <!-- Unified Tokyo Night GitHub Stats Grid (Same engine, font & palette) -->
+  <!-- Unified Tokyo Night GitHub Stats Grid (Synced 100% with Contribution Graph) -->
   <p>
-    <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PhongLH05&theme=tokyonight" alt="GitHub Stats" />
-    <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PhongLH05&theme=tokyonight" alt="Top Languages" />
+    <img width="49%" src="./assets/stats.svg" alt="GitHub Stats" />
+    <img width="49%" src="./assets/top-langs.svg" alt="Top Mobile Stack" />
   </p>
   <p>
-    <img width="99%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PhongLH05&theme=tokyonight" alt="Profile Details" />
+    <img width="99%" src="./assets/profile-details.svg" alt="Profile Details" />
   </p>
 
 </div>
