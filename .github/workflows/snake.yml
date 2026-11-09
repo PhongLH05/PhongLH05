@@ -1,5 +1,5 @@
 name: Generate Snake Animation
-# Automated GitHub contribution graph workflow
+# Automated GitHub contribution graph workflow (v1)
 
 on:
   schedule:
