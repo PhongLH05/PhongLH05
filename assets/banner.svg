@@ -1,170 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="100%" height="100%">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B0F19" />
-      <stop offset="50%" stop-color="#111827" />
-      <stop offset="100%" stop-color="#0F172A" />
+    <!-- Exact Tokyo Night Background to match Stats Cards -->
+    <linearGradient id="tnBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1B27" />
+      <stop offset="100%" stop-color="#16161E" />
     </linearGradient>
 
-    <!-- Accent Gradient for Name & Border -->
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8" />
-      <stop offset="50%" stop-color="#818CF8" />
-      <stop offset="100%" stop-color="#C084FC" />
+    <!-- Tokyo Night Title Gradient (#70A5FD -> #BF91F3) -->
+    <linearGradient id="tnAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#70A5FD" />
+      <stop offset="55%" stop-color="#9D7CD8" />
+      <stop offset="100%" stop-color="#BF91F3" />
     </linearGradient>
 
-    <!-- Subtle Border Gradient -->
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.45" />
-      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#C084FC" stop-opacity="0.45" />
+    <!-- Subtle Tokyo Night Border -->
+    <linearGradient id="tnBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#70A5FD" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#BF91F3" stop-opacity="0.35" />
     </linearGradient>
 
-    <!-- Glow Filters -->
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="35" result="blur" />
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30" result="blur" />
     </filter>
 
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#FFFFFF" stroke-width="0.6" stroke-opacity="0.04" />
-    </pattern>
-
-    <clipPath id="cardClip">
-      <rect x="2" y="2" width="896" height="226" rx="18" />
+    <clipPath id="bannerClip">
+      <rect x="1" y="1" width="898" height="198" rx="10" />
     </clipPath>
   </defs>
 
   <style>
-    .title {
+    .heading {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 36px;
-      font-weight: 800;
-      fill: #F8FAFC;
-      letter-spacing: -0.5px;
+      font-size: 32px;
+      font-weight: 700;
+      fill: #C0CAF5;
     }
-    .name-highlight {
-      fill: url(#textGrad);
+    .accent-name {
+      fill: url(#tnAccent);
     }
-    .subtitle {
+    .subtext {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14.5px;
+      font-weight: 400;
+      fill: #A9B1D6;
+    }
+    .mono {
       font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
-      font-size: 15px;
-      font-weight: 500;
-      fill: #94A3B8;
-      letter-spacing: 0.3px;
-    }
-    .badge-text {
-      font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 600;
-      fill: #E2E8F0;
     }
-    .code-card-text {
+    .code {
       font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
-      font-size: 12.5px;
-      fill: #CBD5E1;
+      font-size: 12px;
+      fill: #A9B1D6;
     }
-    .float-slow {
-      animation: float 6s ease-in-out infinite;
+    .pulse {
+      animation: pulseOp 2.4s ease-in-out infinite;
     }
-    .float-delayed {
-      animation: float 7s ease-in-out 1.5s infinite;
-    }
-    .pulse-dot {
-      animation: pulse 2.2s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-7px); }
-    }
-    @keyframes pulse {
+    @keyframes pulseOp {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.35; }
     }
   </style>
 
-  <!-- Main Card Container -->
-  <g clip-path="url(#cardClip)">
-    <rect x="2" y="2" width="896" height="226" rx="18" fill="url(#bgGrad)" />
-    <rect x="2" y="2" width="896" height="226" fill="url(#grid)" />
+  <g clip-path="url(#bannerClip)">
+    <!-- Card Background -->
+    <rect x="1" y="1" width="898" height="198" rx="10" fill="url(#tnBg)" />
 
-    <!-- Ambient Glowing Orbs -->
-    <circle cx="120" cy="30" r="110" fill="#38BDF8" opacity="0.14" filter="url(#glow)" />
-    <circle cx="760" cy="190" r="130" fill="#818CF8" opacity="0.16" filter="url(#glow)" />
-    <circle cx="620" cy="40" r="90" fill="#C084FC" opacity="0.12" filter="url(#glow)" />
+    <!-- Soft Tokyo Night Ambient Glow -->
+    <circle cx="100" cy="30" r="90" fill="#70A5FD" opacity="0.10" filter="url(#softGlow)" />
+    <circle cx="780" cy="160" r="100" fill="#BF91F3" opacity="0.12" filter="url(#softGlow)" />
 
-    <!-- Left Content: Status Pill -->
-    <g transform="translate(52, 42)">
-      <rect x="0" y="0" width="215" height="28" rx="14" fill="#1E293B" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
-      <circle class="pulse-dot" cx="16" cy="14" r="4.5" fill="#38BDF8" />
-      <text x="30" y="18.5" class="badge-text" fill="#38BDF8">Mobile App Developer</text>
+    <!-- Role Tag -->
+    <g transform="translate(44, 32)">
+      <rect x="0" y="0" width="196" height="26" rx="13" fill="#24283B" stroke="#414868" stroke-width="1" />
+      <circle class="pulse" cx="15" cy="13" r="4" fill="#7DCFFF" />
+      <text x="28" y="17" class="mono" fill="#7DCFFF">Mobile App Developer</text>
     </g>
 
-    <!-- Left Content: Main Heading -->
-    <text x="52" y="118" class="title">
-      Hi there, I'm <tspan class="name-highlight">Phong (LeoG)</tspan>
+    <!-- Main Title -->
+    <text x="44" y="98" class="heading">
+      Hi there, I'm <tspan class="accent-name">Phong (LeoG)</tspan>
     </text>
 
-    <!-- Left Content: Subtitle -->
-    <text x="52" y="150" class="subtitle">
-      Crafting smooth cross-platform &amp; native mobile experiences
+    <!-- Subtitle (Sized cleanly so it never touches the right card) -->
+    <text x="44" y="126" class="subtext">
+      Building cross-platform &amp; native mobile apps with clean UI/UX.
     </text>
 
-    <!-- Left Content: Tech Pills -->
-    <g transform="translate(52, 172)">
-      <!-- Flutter -->
-      <rect x="0" y="0" width="88" height="28" rx="8" fill="#02569B" fill-opacity="0.22" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="1" />
-      <text x="44" y="18.5" text-anchor="middle" class="badge-text" fill="#7DD3FC">Flutter</text>
+    <!-- Tokyo Night Tech Pills -->
+    <g transform="translate(44, 146)">
+      <rect x="0" y="0" width="78" height="26" rx="6" fill="#24283B" stroke="#70A5FD" stroke-opacity="0.45" stroke-width="1" />
+      <text x="39" y="17" text-anchor="middle" class="mono" fill="#70A5FD">Flutter</text>
 
-      <!-- Dart -->
-      <rect x="98" y="0" width="70" height="28" rx="8" fill="#0175C2" fill-opacity="0.22" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="1" />
-      <text x="133" y="18.5" text-anchor="middle" class="badge-text" fill="#7DD3FC">Dart</text>
+      <rect x="88" y="0" width="64" height="26" rx="6" fill="#24283B" stroke="#7DCFFF" stroke-opacity="0.45" stroke-width="1" />
+      <text x="120" y="17" text-anchor="middle" class="mono" fill="#7DCFFF">Dart</text>
 
-      <!-- Kotlin -->
-      <rect x="178" y="0" width="82" height="28" rx="8" fill="#7F52FF" fill-opacity="0.2" stroke="#A78BFA" stroke-opacity="0.45" stroke-width="1" />
-      <text x="219" y="18.5" text-anchor="middle" class="badge-text" fill="#C4B5FD">Kotlin</text>
+      <rect x="162" y="0" width="74" height="26" rx="6" fill="#24283B" stroke="#BF91F3" stroke-opacity="0.45" stroke-width="1" />
+      <text x="199" y="17" text-anchor="middle" class="mono" fill="#BF91F3">Kotlin</text>
 
-      <!-- Swift -->
-      <rect x="270" y="0" width="76" height="28" rx="8" fill="#F05138" fill-opacity="0.18" stroke="#FB923C" stroke-opacity="0.45" stroke-width="1" />
-      <text x="308" y="18.5" text-anchor="middle" class="badge-text" fill="#FDBA74">Swift</text>
+      <rect x="246" y="0" width="68" height="26" rx="6" fill="#24283B" stroke="#F7768E" stroke-opacity="0.45" stroke-width="1" />
+      <text x="280" y="17" text-anchor="middle" class="mono" fill="#F7768E">Swift</text>
     </g>
 
-    <!-- Right Content: Floating Code Window Illustration -->
-    <g class="float-slow">
-      <g transform="translate(585, 36)">
-        <!-- Code Card Backdrop -->
-        <rect x="0" y="0" width="265" height="158" rx="12" fill="#0F172A" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
-        <!-- Window Header Bar -->
-        <rect x="0" y="0" width="265" height="28" rx="12" fill="#1E293B" />
-        <rect x="0" y="16" width="265" height="12" fill="#1E293B" />
-        <!-- Mac Traffic Lights -->
-        <circle cx="16" cy="14" r="4.5" fill="#EF4444" />
-        <circle cx="30" cy="14" r="4.5" fill="#F59E0B" />
-        <circle cx="44" cy="14" r="4.5" fill="#10B981" />
-        <text x="132" y="18" text-anchor="middle" class="code-card-text" font-size="11" fill="#64748B">developer.dart</text>
+    <!-- Right Code Box (Tokyo Night Editor Theme) -->
+    <g transform="translate(590, 26)">
+      <rect x="0" y="0" width="268" height="148" rx="8" fill="#16161E" stroke="#292E42" stroke-width="1.2" />
+      <rect x="0" y="0" width="268" height="26" rx="8" fill="#1F2335" />
+      <rect x="0" y="16" width="268" height="10" fill="#1F2335" />
+      <circle cx="15" cy="13" r="4" fill="#F7768E" />
+      <circle cx="28" cy="13" r="4" fill="#E0AF68" />
+      <circle cx="41" cy="13" r="4" fill="#9ECE6A" />
+      <text x="134" y="17" text-anchor="middle" class="code" font-size="11" fill="#565F89">profile.dart</text>
 
-        <!-- Code Lines -->
-        <text x="18" y="52" class="code-card-text">
-          <tspan fill="#C084FC">class</tspan> <tspan fill="#38BDF8">PhongLH05</tspan> <tspan fill="#94A3B8">{</tspan>
-        </text>
-        <text x="32" y="74" class="code-card-text">
-          <tspan fill="#94A3B8">final</tspan> role = <tspan fill="#34D399">'Mobile Dev'</tspan>;
-        </text>
-        <text x="32" y="96" class="code-card-text">
-          <tspan fill="#94A3B8">final</tspan> stack = [
-        </text>
-        <text x="46" y="116" class="code-card-text">
-          <tspan fill="#FBBF24">'Flutter'</tspan>, <tspan fill="#FBBF24">'Kotlin'</tspan>, <tspan fill="#FBBF24">'Swift'</tspan>
-        </text>
-        <text x="32" y="134" class="code-card-text">
-          ];
-        </text>
-        <text x="18" y="150" class="code-card-text" fill="#94A3B8">}</text>
-      </g>
+      <text x="18" y="48" class="code">
+        <tspan fill="#BB9AF7">class</tspan> <tspan fill="#7DCFFF">Developer</tspan> <tspan fill="#A9B1D6">{</tspan>
+      </text>
+      <text x="32" y="70" class="code">
+        <tspan fill="#7AA2F7">final</tspan> name = <tspan fill="#9ECE6A">'Lê Hồng Phong'</tspan>;
+      </text>
+      <text x="32" y="92" class="code">
+        <tspan fill="#7AA2F7">final</tspan> role = <tspan fill="#9ECE6A">'Mobile Dev'</tspan>;
+      </text>
+      <text x="32" y="114" class="code">
+        <tspan fill="#7AA2F7">final</tspan> focus = <tspan fill="#9ECE6A">'UI/UX &amp; Perf'</tspan>;
+      </text>
+      <text x="18" y="134" class="code" fill="#A9B1D6">}</text>
     </g>
   </g>
 
-  <!-- Outer Crisp Border -->
-  <rect x="2" y="2" width="896" height="226" rx="18" fill="none" stroke="url(#borderGrad)" stroke-width="1.5" />
+  <rect x="1" y="1" width="898" height="198" rx="10" fill="none" stroke="url(#tnBorder)" stroke-width="1.2" />
 </svg>
